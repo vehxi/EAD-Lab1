@@ -43,3 +43,13 @@ src/
         │   ├── main-form.html
         │   └── result.html
         └── application.properties
+```
+## Скриншоты работы приложения
+
+### Форма ввода
+
+![Форма ввода](img/newStudent.png)
+
+### Результат
+
+![Результат обработки](img/result.png)
