@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Новый студент</title>
+
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+<main class="container">
+    <h1>Форма информации о студенте</h1>
+
+    <form th:action="@{/form}"
+          th:object="${student}"
+          method="post">
+
+        <div class="form-group">
+            <label for="id">ID студента</label>
+            <input
+                    id="id"
+                    type="number"
+                    th:field="*{id}"
+                    min="1"
+                    required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="surname">Фамилия</label>
+            <input
+                    id="surname"
+                    type="text"
+                    th:field="*{surname}"
+                    placeholder="Введите фамилию"
+                    required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="name">Имя</label>
+            <input
+                    id="name"
+                    type="text"
+                    th:field="*{name}"
+                    placeholder="Введите имя"
+                    required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="patronymic">Отчество</label>
+            <input
+                    id="patronymic"
+                    type="text"
+                    th:field="*{patronymic}"
+                    placeholder="Введите отчество"
+                    required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+                    id="email"
+                    type="email"
+                    th:field="*{email}"
+                    placeholder="student@example.com"
+                    required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="admissionYear">Год поступления</label>
+            <input
+                    id="admissionYear"
+                    type="number"
+                    th:field="*{admissionYear}"
+                    placeholder="Например, 2024"
+                    min="2000"
+                    max="2099"
+                    required
+            >
+        </div>
+
+        <div class="buttons">
+            <button type="submit">Отправить</button>
+            <button type="reset" class="secondary">
+                Сбросить
+            </button>
+        </div>
+    </form>
+</main>
+</body>
+</html>

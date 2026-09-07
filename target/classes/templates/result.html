@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="bots">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Информация о студенте</title>
+
+  <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+
+<body>
+<main class="container">
+  <h1>Информация о студенте</h1>
+
+  <div class="result">
+    <p>
+      <strong>ID:</strong>
+      <span th:text="${student.id}"></span>
+    </p>
+
+    <p>
+      <strong>Фамилия:</strong>
+      <span th:text="${student.surname}"></span>
+    </p>
+
+    <p>
+      <strong>Имя:</strong>
+      <span th:text="${student.name}"></span>
+    </p>
+
+    <p>
+      <strong>Отчество:</strong>
+      <span th:text="${student.patronymic}"></span>
+    </p>
+
+    <p>
+      <strong>E-mail:</strong>
+      <span th:text="${student.email}"></span>
+    </p>
+
+    <p>
+      <strong>Год поступления:</strong>
+      <span th:text="${student.admissionYear}"></span>
+    </p>
+
+    <p>
+      <strong>Группа:</strong>
+      <span th:text="${student.group}"></span>
+    </p>
+
+    <p>
+      <strong>Логин:</strong>
+      <span th:text="${student.login}"></span>
+    </p>
+  </div>
+
+  <a class="button-link" th:href="@{/form}">
+    Ввести данные другого студента
+  </a>
+</main>
+</body>
+</html>
